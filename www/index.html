@@ -36,14 +36,31 @@
         <title>Hello World</title>
     </head>
     <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-        </div>
+        <header>
+
+        </header>
+        <main class="container">
+            <section class="page" id="homep">
+                <button class="btn" id="goPage" data-target="playnow">Create Notification</button>
+                <ul class="note-list"> </ul>
+            </section>
+
+            <section class="page" id="playnow">
+                    <form>
+                        Title:<br>
+                        <input id="txt" type="text" name="Title" placeholder="Set Title"><br>
+                        Text:<br>
+                        <input id="desc" type="text" name="Text" placeholder="Description"><br>
+                        Time:<br>
+                        <input id="time" type="datetime-local" name="time" placeholder="13:30"><br><br>
+                      </form>
+                <button class="btn" id="add-btn" data-target="homep" >Add Notification</button>
+                <button class="btn" id="bk-btn" data-target="homep" >Cancel</button>
+            </section>
+            
+        </main>
         <script type="text/javascript" src="cordova.js"></script>
+        <script src="js/luxon.min.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>
